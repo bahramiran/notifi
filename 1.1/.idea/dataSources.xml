@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="mNotification@192.168.137.10" uuid="ead602a2-a595-48c6-bd39-ad6f7ea10df7">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://192.168.137.10\SQL2012;databaseName=mNotification</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="mNotification@192.168.137.10 [2]" uuid="9514b2e4-fdc3-405e-9055-35cb1d384b6d">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://192.168.137.10\SQL2012;databaseName=mNotification</jdbc-url>
+    </data-source>
+  </component>
+</project>

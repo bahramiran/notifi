@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="use_sql_comments">false</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://192.168.137.10\SQL2012;databaseName=mNotification</property>
+        <property name="connection.username">sa</property>
+        <property name="connection.password">QAZwsx!23</property>
+        <property name="c3p0.max_size">10</property>
+        <property name="connection.pool_size">20</property>
+        <!-- add classes to map from here -->
+
+        <mapping class="com.drsaina.notifi.model.CoreNotifications"/>
+        <mapping class="com.drsaina.notifi.model.CoreNotificationsApps"/>
+        <mapping class="com.drsaina.notifi.model.CoreNotificationsParameters"/>
+        <mapping class="com.drsaina.notifi.model.CoreUsers"/>
+        <mapping class="com.drsaina.notifi.model.CoreNotificationsUsersTokens"/>
+        <mapping class="com.drsaina.notifi.model.CoreNotificationsSendedUsers"/>
+
+    </session-factory>
+</hibernate-configuration>

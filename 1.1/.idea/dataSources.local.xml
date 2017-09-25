@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="mNotification@192.168.137.10" uuid="ead602a2-a595-48c6-bd39-ad6f7ea10df7">
+      <database-info product="Microsoft SQL Server" version="11.00.2100" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 6.0 for SQL Server" driver-version="6.0.8112.100">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>sa</user-name>
+      <resolve-scope>mNotification:*</resolve-scope>
+    </data-source>
+    <data-source name="mNotification@192.168.137.10 [2]" uuid="9514b2e4-fdc3-405e-9055-35cb1d384b6d">
+      <database-info product="Microsoft SQL Server" version="11.00.2100" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 6.0 for SQL Server" driver-version="6.0.8112.100">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>sa</user-name>
+      <resolve-scope>mNotification:*</resolve-scope>
+    </data-source>
+  </component>
+</project>

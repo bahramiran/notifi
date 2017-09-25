@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_servernotification" default="compile.module.servernotification">
+  <dirname property="module.servernotification.basedir" file="${ant.file.module_servernotification}"/>
+  
+  <property name="module.jdk.home.servernotification" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.servernotification" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.servernotification" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.servernotification" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="servernotification.output.dir" value="${module.servernotification.basedir}/bin"/>
+  <property name="servernotification.testoutput.dir" value="${module.servernotification.basedir}/bin"/>
+  
+  <path id="servernotification.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="servernotification.module.production.classpath">
+    <pathelement location="${basedir}/lib/antlr-2.7.7.jar"/>
+    <pathelement location="${basedir}/lib/dom4j-1.6.1.jar"/>
+    <pathelement location="${basedir}/lib/ejb3-persistence-1.0.2.GA.jar"/>
+    <pathelement location="${basedir}/lib/hibernate-commons-annotations-4.0.1.Final.jar"/>
+    <pathelement location="${basedir}/lib/hibernate-core-4.1.9.Final.jar"/>
+    <pathelement location="${basedir}/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+    <pathelement location="${basedir}/lib/javassist-3.17.1-GA.jar"/>
+    <pathelement location="${basedir}/lib/jboss-logging-3.1.0.GA.jar"/>
+    <pathelement location="${basedir}/lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+    <path refid="${module.jdk.classpath.servernotification}"/>
+    <pathelement location="${basedir}/lib/mysql-connector-java-5.1.10.jar"/>
+    <pathelement location="${basedir}/resources"/>
+    <path refid="library.sqljdbc4-4.0.classpath"/>
+    <path refid="library.com.google.code.gson:gson:2.8.1.classpath"/>
+  </path>
+  
+  <path id="servernotification.runtime.production.module.classpath">
+    <pathelement location="${servernotification.output.dir}"/>
+    <pathelement location="${basedir}/lib/antlr-2.7.7.jar"/>
+    <pathelement location="${basedir}/lib/dom4j-1.6.1.jar"/>
+    <pathelement location="${basedir}/lib/ejb3-persistence-1.0.2.GA.jar"/>
+    <pathelement location="${basedir}/lib/hibernate-commons-annotations-4.0.1.Final.jar"/>
+    <pathelement location="${basedir}/lib/hibernate-core-4.1.9.Final.jar"/>
+    <pathelement location="${basedir}/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+    <pathelement location="${basedir}/lib/javassist-3.17.1-GA.jar"/>
+    <pathelement location="${basedir}/lib/jboss-logging-3.1.0.GA.jar"/>
+    <pathelement location="${basedir}/lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+    <pathelement location="${basedir}/lib/mysql-connector-java-5.1.10.jar"/>
+    <pathelement location="${basedir}/resources"/>
+    <path refid="library.sqljdbc4-4.0.classpath"/>
+    <path refid="library.com.google.code.gson:gson:2.8.1.classpath"/>
+  </path>
+  
+  <path id="servernotification.module.classpath">
+    <pathelement location="${servernotification.output.dir}"/>
+    <pathelement location="${basedir}/lib/antlr-2.7.7.jar"/>
+    <pathelement location="${basedir}/lib/dom4j-1.6.1.jar"/>
+    <pathelement location="${basedir}/lib/ejb3-persistence-1.0.2.GA.jar"/>
+    <pathelement location="${basedir}/lib/hibernate-commons-annotations-4.0.1.Final.jar"/>
+    <pathelement location="${basedir}/lib/hibernate-core-4.1.9.Final.jar"/>
+    <pathelement location="${basedir}/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+    <pathelement location="${basedir}/lib/javassist-3.17.1-GA.jar"/>
+    <pathelement location="${basedir}/lib/jboss-logging-3.1.0.GA.jar"/>
+    <pathelement location="${basedir}/lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+    <path refid="${module.jdk.classpath.servernotification}"/>
+    <pathelement location="${basedir}/lib/mysql-connector-java-5.1.10.jar"/>
+    <pathelement location="${basedir}/resources"/>
+    <path refid="library.sqljdbc4-4.0.classpath"/>
+    <path refid="library.com.google.code.gson:gson:2.8.1.classpath"/>
+  </path>
+  
+  <path id="servernotification.runtime.module.classpath">
+    <pathelement location="${servernotification.output.dir}"/>
+    <pathelement location="${basedir}/lib/antlr-2.7.7.jar"/>
+    <pathelement location="${basedir}/lib/dom4j-1.6.1.jar"/>
+    <pathelement location="${basedir}/lib/ejb3-persistence-1.0.2.GA.jar"/>
+    <pathelement location="${basedir}/lib/hibernate-commons-annotations-4.0.1.Final.jar"/>
+    <pathelement location="${basedir}/lib/hibernate-core-4.1.9.Final.jar"/>
+    <pathelement location="${basedir}/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+    <pathelement location="${basedir}/lib/javassist-3.17.1-GA.jar"/>
+    <pathelement location="${basedir}/lib/jboss-logging-3.1.0.GA.jar"/>
+    <pathelement location="${basedir}/lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+    <pathelement location="${basedir}/lib/mysql-connector-java-5.1.10.jar"/>
+    <pathelement location="${basedir}/resources"/>
+    <path refid="library.sqljdbc4-4.0.classpath"/>
+    <path refid="library.com.google.code.gson:gson:2.8.1.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.servernotification">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.servernotification">
+    <patternset refid="excluded.from.module.servernotification"/>
+  </patternset>
+  
+  <path id="servernotification.module.sourcepath">
+    <dirset dir="${module.servernotification.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.servernotification" depends="compile.module.servernotification.production,compile.module.servernotification.tests" description="Compile module com.drsaina.notifi.ServerNotification"/>
+  
+  <target name="compile.module.servernotification.production" depends="register.custom.compilers" description="Compile module com.drsaina.notifi.ServerNotification; production classes">
+    <mkdir dir="${servernotification.output.dir}"/>
+    <javac2 destdir="${servernotification.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.servernotification}/javac">
+      <compilerarg line="${compiler.args.servernotification}"/>
+      <bootclasspath refid="servernotification.module.bootclasspath"/>
+      <classpath refid="servernotification.module.production.classpath"/>
+      <src refid="servernotification.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.servernotification"/>
+    </javac2>
+    
+    <copy todir="${servernotification.output.dir}">
+      <fileset dir="${module.servernotification.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.servernotification.tests" depends="register.custom.compilers,compile.module.servernotification.production" description="compile module com.drsaina.notifi.ServerNotification; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.servernotification" description="cleanup module">
+    <delete dir="${servernotification.output.dir}"/>
+    <delete dir="${servernotification.testoutput.dir}"/>
+  </target>
+</project>
